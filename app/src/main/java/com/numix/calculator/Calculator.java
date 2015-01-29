@@ -414,7 +414,7 @@ public class Calculator extends Activity implements Logic.Listener, OnClickListe
         mLogic.updateHistory();
         mPersist.setDeleteMode(mLogic.getDeleteMode());
         mPersist.setMode(mLogic.mBaseModule.getMode());
-        mPersist.save();
+        // mPersist.save();
     }
 
     @Override
