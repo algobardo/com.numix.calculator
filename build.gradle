@@ -5,15 +5,17 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.1'
+        classpath 'com.android.tools.build:gradle:0.12.+'
         classpath 'dk.au.cs.thor.gradle:instrumentation:1.0.0'
     }
 }
 
 allprojects {
+    task wrapper(type: Wrapper) {
+        gradleVersion = "1.12"
+    }
+
     repositories {
         jcenter()
     }
 }
-
-apply plugin: 'instrumentation'
