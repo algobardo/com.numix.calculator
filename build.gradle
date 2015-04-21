@@ -6,7 +6,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.12.+'
-        classpath 'dk.au.cs.thor.gradle:instrumentation:1.0.0'
     }
 }
 
