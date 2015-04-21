@@ -2,8 +2,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.+'
-
+    
     defaultConfig {
         applicationId "com.numix.calculator"
 
