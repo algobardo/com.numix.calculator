@@ -6,7 +6,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.1'
-        classpath 'dk.au.cs.thor.gradle:instrumentation:1.0.0'
     }
 }
 
@@ -15,5 +14,3 @@ allprojects {
         jcenter()
     }
 }
-
-apply plugin: 'instrumentation'
