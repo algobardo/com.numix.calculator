@@ -23,6 +23,11 @@ android {
     }
 }
 
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
 dependencies {
     compile 'com.intellij:annotations:+@jar'
 
