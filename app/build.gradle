@@ -1,8 +1,8 @@
-apply plugin: 'android'
+apply plugin: "com.android.application"
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.0.0'
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
     
     defaultConfig {
         applicationId "com.numix.calculator"
@@ -12,10 +12,10 @@ android {
     }
 
     packagingOptions {
-        exclude 'LICENSE.txt'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/INDEX.LIST'
+        exclude "LICENSE.txt"
+        exclude "META-INF/LICENSE"
+        exclude "META-INF/NOTICE"
+        exclude "META-INF/INDEX.LIST"
     }
 
 
@@ -33,19 +33,26 @@ repositories {
 }
 
 dependencies {
-    compile 'com.intellij:annotations:+@jar'
+    compile "com.intellij:annotations:+@jar"
 
-    compile files('libs/achartengine.jar')
-    compile files('libs/ejml-0.21.jar')
-    compile files('libs/arity-2.1.6.jar')
-    compile files('libs/slider.jar')
-    compile files('libs/acra-4.5.0-sources.jar')
-    compile files('libs/acra-4.5.0-javadoc.jar')
-    compile files('libs/svg-android.jar')
-    compile files('libs/androidsvg-1.2.1.jar')
-    compile 'com.google.android.gms:play-services:6.+'
+    compile files("libs/achartengine.jar")
+    compile files("libs/ejml-0.21.jar")
+    compile files("libs/arity-2.1.6.jar")
+    compile files("libs/slider.jar")
+    compile files("libs/acra-4.5.0-sources.jar")
+    compile files("libs/acra-4.5.0-javadoc.jar")
+    compile files("libs/svg-android.jar")
+    compile files("libs/androidsvg-1.2.1.jar")
+    compile "com.google.android.gms:play-services:6.+"
 
-    androidTestCompile ('dk.au.cs.android.espresso:library:2.0') {
+    androidTestCompile ("dk.au.cs.android.espresso:library:2.0") {
         exclude group: "com.android.support"
     }
+
+    // App's dependencies, including test
+    // compile "com.android.support:support-annotations:21.0.3"
+
+    // Testing-only dependencies
+    // androidTestCompile "com.android.support.test:runner:0.2"
+    // androidTestCompile "com.android.support.test.espresso:espresso-core:2.0"
 }
