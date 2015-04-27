@@ -45,13 +45,9 @@ dependencies {
         exclude group: "org.json"
     }
 
-    /*androidTestCompile ("dk.au.cs.android.espresso:library:2.0") {
+    androidTestCompile ("dk.au.cs.android.espresso:library:2.0") {
         exclude group: "com.android.support"
-    }*/
+    }
 
-    // App's dependencies, including test
-    // compile "com.android.support:support-annotations:21.0.3"
-
-    // Testing-only dependencies
-    androidTestCompile "com.android.support.test.espresso:espresso-core:2.0"
+    // androidTestCompile "com.android.support.test.espresso:espresso-core:2.0"
 }
