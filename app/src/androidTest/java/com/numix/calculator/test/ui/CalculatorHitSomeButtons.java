@@ -42,8 +42,8 @@ public class CalculatorHitSomeButtons extends ActivityInstrumentationTestCase2<C
 
     @Override
     protected void tearDown() throws Exception {
-        super.tearDown();
         systemAnimations.enableAll();
+        super.tearDown();
     }
 
     public void testCalculatorPlus() throws InterruptedException {
