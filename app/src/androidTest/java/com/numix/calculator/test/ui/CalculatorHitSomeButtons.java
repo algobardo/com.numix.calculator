@@ -9,12 +9,12 @@ import com.numix.calculator.view.CalculatorDisplay;
 import com.numix.calculator.R;
 import com.numix.calculator.test.SystemAnimations;
 
-import android.support.test.espresso.matcher.BoundedMatcher;
+import com.google.android.apps.common.testing.ui.espresso.matcher.BoundedMatcher;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
+import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.click;
+import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.matches;
+import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -42,8 +42,8 @@ public class CalculatorHitSomeButtons extends ActivityInstrumentationTestCase2<C
 
     @Override
     protected void tearDown() throws Exception {
-        super.tearDown();
         systemAnimations.enableAll();
+        super.tearDown();
     }
 
     public void testCalculatorPlus() throws InterruptedException {
