@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.numix.calculator"
 
-        testApplicationId "com.numix.calculator.tests"
+        testApplicationId "com.numix.calculator.test"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 

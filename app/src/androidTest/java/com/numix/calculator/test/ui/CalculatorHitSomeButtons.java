@@ -7,6 +7,7 @@ import android.view.View;
 import com.numix.calculator.Calculator;
 import com.numix.calculator.view.CalculatorDisplay;
 import com.numix.calculator.R;
+import com.numix.calculator.test.SystemAnimations;
 
 import android.support.test.espresso.matcher.BoundedMatcher;
 
@@ -25,6 +26,8 @@ public class CalculatorHitSomeButtons extends ActivityInstrumentationTestCase2<C
 
     Activity activity;
 
+    private SystemAnimations systemAnimations;
+
     public CalculatorHitSomeButtons() {
         super(Calculator.class);
     }
@@ -32,12 +35,15 @@ public class CalculatorHitSomeButtons extends ActivityInstrumentationTestCase2<C
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+        systemAnimations = new SystemAnimations(getInstrumentation().getContext());
+        systemAnimations.disableAll();
         activity = getActivity();
     }
 
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
+        systemAnimations.enableAll();
     }
 
     public void testCalculatorPlus() throws InterruptedException {
